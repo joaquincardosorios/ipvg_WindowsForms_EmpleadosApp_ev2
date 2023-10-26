@@ -9,6 +9,7 @@ namespace DAL
 {
     public class EmpleadoDAL
     {
+        // 
         public bool GuardarEmpleado(Empleado empleado)
         {
             string fecharFormateada = empleado.DoB.ToString("yyyy-MM-dd");
