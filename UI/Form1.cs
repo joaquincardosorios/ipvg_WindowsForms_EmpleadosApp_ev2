@@ -21,7 +21,6 @@ namespace UI
         {
             InitializeComponent();
             empleadoBLL= new EmpleadoBLL();
-            formularioEmpleado = new NuevoEmpleadoForm();
         }
 
         public void CargarEmpleados()
@@ -48,7 +47,11 @@ namespace UI
 
         private void btn_nuevo_empleado_Click(object sender, EventArgs e)
         {
-            formularioEmpleado.ShowDialog();
+            formularioEmpleado = new NuevoEmpleadoForm();
+            if (formularioEmpleado.ShowDialog() == DialogResult.OK)
+            {
+                this.CargarEmpleados();
+            }
         }
     }
 }

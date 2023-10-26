@@ -13,7 +13,7 @@ namespace DAL
         {
             string fecharFormateada = empleado.DoB.ToString("yyyy-MM-dd");
             string query = $"" +
-                $"INSERT INTO Empledos(Nombre, Apellido, FechaNacimiento, Departamento, Salario) " +
+                $"INSERT INTO Empleados(Nombre, Apellido, FechaNacimiento, Departamento, Salario) " +
                 $"VALUES('{empleado.Name}', '{empleado.Lastname}', '{fecharFormateada}', '{empleado.Department}', {empleado.Salary})";
             int rows = DatabaseHelper.Instance.ExecuteNonQuery(query);
             if (rows == 0)

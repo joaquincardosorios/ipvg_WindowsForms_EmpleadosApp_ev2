@@ -16,6 +16,7 @@ namespace UI
     public partial class NuevoEmpleadoForm : Form
     {
         private EmpleadoBLL empleadoBLL;
+
         public NuevoEmpleadoForm()
         {
             InitializeComponent();
@@ -38,6 +39,12 @@ namespace UI
                 Empleado empleado = new Empleado(name, lastname, dob,department,salary);
 
                 this.empleadoBLL.AgregarEmpleado(empleado);
+                txt_name.Clear();
+                txt_lastname.Clear();
+                txt_department.Clear();
+                txt_salary.Clear();
+                dtp_dob.ResetText();
+                this.DialogResult = DialogResult.OK;
                 Close();
             } catch(Exception ex)
             {

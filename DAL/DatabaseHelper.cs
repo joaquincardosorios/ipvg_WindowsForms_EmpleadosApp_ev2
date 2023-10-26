@@ -17,7 +17,7 @@ namespace DAL
             get { return instance; }
         }
 
-        private static string CONNTECTION_STRING = "Data Source=L302-12\\SQLEXPRESS; Initial Catalog=construccion_software; Integrated Security=True ";
+        private static string CONNTECTION_STRING = "Data Source=DESKTOP-NEQ7ASB\\SQLEXPRESS; Initial Catalog=Tareas; Integrated Security=True ";
 
         public int ExecuteNonQuery(string query)
         {
